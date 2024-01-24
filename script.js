@@ -69,7 +69,7 @@ function questionAnswer(array){
     
 }
 
-//Using shuffled questions, starts the game, and validates
+//Using shuffled questions, starts the game, and validates responses, and calculates scored
 function showQuestion(array, index, correctCount){
     if (index < array.length) {
     resultEl.textContent = "Current Score:" + correctCount;
@@ -78,7 +78,7 @@ function showQuestion(array, index, correctCount){
     questionEl.textContent = currentQuestion;
     var randomizedAnswers= shuffleArray(array[index][1]);
 
-    console.log(correctAnswer);
+    console.log("Correct Answer: " + correctAnswer);
 
     //Show Answer Options
     answerEl1.textContent = randomizedAnswers[0];
@@ -87,16 +87,20 @@ function showQuestion(array, index, correctCount){
     answerEl4.textContent = randomizedAnswers[3];
 
     answerEl.addEventListener("click", function(e) {
+
+        console.log("target value: " + e.target.textContent);
+        console.log("Validate against: " + correctAnswer);
+
         if (e.target.textContent === correctAnswer ) {
             correctCount++;
             resultEl.textContent = "CORRECT! You have answered: " + correctCount + " questions correctly.";
             index += 1;
-            showQuestion(array, index, correctCount);
+            return showQuestion(array, index, correctCount);
         }
         else {
         resultEl.textContent = "Current Score: " + correctCount;
         index += 1;
-        showQuestion(array, index, correctCount);
+        return showQuestion(array, index, correctCount);
         }
     });
 }
