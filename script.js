@@ -105,6 +105,7 @@ else {
         endGameEl.setAttribute("style", "visibility: visible");
     }
     localStorage.setItem("count", correctCount);
+
 }
 
 
@@ -136,7 +137,7 @@ resetScore.addEventListener("click", function(){
 
 
 
-//QUESTIONS
+//QUESTIONS, correct answer is always in the index[0] position in the answer options
 displayQuestionArray= [['What does the === comparison operator do?',
 ['It tests for equality of value and type', 
 'It sets one variable equal to another in both value and type', 
@@ -151,33 +152,3 @@ displayQuestionArray= [['What does the === comparison operator do?',
 
 ['Which attribute must have a unique value each time it is used in an HTML document?',
 ['id', 'title', 'class', 'style']]];
-
-
-/**
-var question1= new questionText('What does the === comparison operator do?', 
-'It sets one variable equal to another in both value and type', 
-'It tests for equality of type only',
-'It tests for equality of value only',
-'It tests for equality of value and type');
-question1.questionArray(question1);
-
-
-var question2 = new questionText('Which choice is NOT part of CSS box model?',
- 'paragraph', 'margin', 'border', 'padding');
-
-var question3 = new questionText('In the following code, the variable fruit has been assigned a value of apple. How would you change the value to plum?  let fruit = "apple";',
- 'fruit = "plum";', 'const fruit = "plum";', 'var fruit = "plum";', 'let fruit = "plum";');
-
- var currentQuestion = array[index][0];
-        var correctAnswer = array[index][1][0];
-        questionEl.textContent = currentQuestion;
-        var randomizedAnswers= shuffleArray(array[index][1]);
-
-        //Show Answer Options
-        answerEl1.textContent = randomizedAnswers[0];
-        answerEl2.textContent = randomizedAnswers[1];
-        answerEl3.textContent = randomizedAnswers[2];
-        answerEl4.textContent = randomizedAnswers[3];
-        
-        answerEl.addEventListener("click", validateChoice(correctAnswer, timeLeft)); 
-  */

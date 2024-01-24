@@ -2,17 +2,14 @@
 Coding Quiz Game 
 
 # Description
-Leveraging HTML, Bootstrap, and Javascript this is a quiz game  
+Leveraging HTML, Bootstrap, and Javascript this is a quiz game that shows a random question, and randomizes answers. Validates selections and updates the currentscore.
 
 # Visuals
 ![Screenshot](<Screenshot 2024-01-23 at 11.38.52 PM.png>)
 
 # Usage
-[githublink](https://github.com/sheehpat/javascript_password_generator)
-[launchpages](https://sheehpat.github.io/javascript_password_generator)
+[githublink](https://github.com/sheehpat/coding_quiz_game_webAPIs)
+[launchpages](https://sheehpat.github.io/coding_quiz_game_webAPIs)
 
 # Authors and acknowledgment
-HTML & CSS provided by Rutgers Bootcamp, Javascript refactored and written by Patrick Sheehan.
-
-# Project status
-Completed
+HTML and Javascript written by Patrick Sheehan
